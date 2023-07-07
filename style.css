@@ -25,6 +25,10 @@ header, footer, .gallery, .presentation, .container-book{
     border: 0;
 }
 
+nav{
+    margin-top: 34px;
+}
+
 nav, footer {
     display: flex;
     justify-content: space-between;
@@ -145,7 +149,19 @@ header p {
 
 .work img {
     width: 540px;
-    height: 540px;
+    height: 440px;
+}
+
+.container-arrow{
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.arrow ion-icon{
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
 }
 
 .container-book{
@@ -210,5 +226,31 @@ header p {
 
     .work img{
         height: 400px;
+    }
+}
+
+@media screen and (max-width:820px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-gap: 20px;
+        grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6";
+    }
+
+    .gallery-item{
+        height: 100px;
+    }
+
+    .book-text{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
