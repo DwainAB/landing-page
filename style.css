@@ -1,0 +1,214 @@
+body {
+    background: var(--light-cream, #FFF7F0);
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+header, footer, .gallery, .presentation, .container-book{
+    margin-left: 165px;
+    margin-right: 165px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+.btn-black {
+    font-size: 1rem;
+    background-color: black;
+    color: #FFF7F0;
+    font-weight: 700;
+    width: 220px;
+    height: 56px;
+    border-radius: 20px;
+    border: 0;
+}
+
+nav, footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #030303;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+header p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+    grid-template-areas:
+        "item1 item2 item3 item5"
+        "item1 item4 item4 item6";
+    margin-bottom: 156px;
+    margin-top: 80px;
+}
+
+.gallery-item{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 24px;
+    padding-bottom:24px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.item1 {
+    grid-area: item1;
+    height: 364px;
+    background-color: #755CDE;
+}
+
+.item2 {
+    grid-area: item2;
+    background-color: #F6A560;
+}
+
+.item3 {
+    grid-area: item3;
+    background-color: #F39E9E;
+}
+
+.item4 {
+    grid-area: item4;
+    background-color: #EB7565;
+}
+
+.item5 {
+    grid-area: item5;
+    background-color: #61C4B7;
+}
+
+.item6 {
+    grid-area: item6;
+    background-color: #552049;
+}
+
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentation img {
+    width: 40%;
+    height: 40%;
+    padding: 20px;
+}
+
+.presentation-text h2 {
+    color: #030303;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.presentation p {
+    color: #7A746E;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.presentation button {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    width: 220px;
+    height: 56px;
+    background-color: #EB7565;
+    border-radius: 20px;
+    border: 0;
+}
+
+.list-work {
+    display: flex;
+    overflow: scroll;
+    justify-content: space-between;
+}
+
+.container-work h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.work img {
+    width: 540px;
+    height: 540px;
+}
+
+.container-book{
+    background-color: #030303;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 320px;
+    color: #FFF7F0;
+    padding-left: 65px;
+    padding-right: 95px;
+    margin-top: 88px;
+    margin-bottom: 60px;
+}
+
+.book-text h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.book-text p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container-book button{
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #EB7565;
+    width: 220px;
+    height: 56px;
+    border-radius: 20px;
+    color: #FFF7F0;
+    border: 0;
+}
+
+@media screen and (max-width:1024px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr 200px 1fr;
+        grid-gap: 20px;
+        grid-template-areas:
+        "item1 item1 item1 item1"
+        "item2 item3 item4 item4"
+        "item5 item5 item6 item6";
+    }
+
+    .item1{
+        height: 200px;
+    }
+
+    .presentation{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-book{
+        flex-direction: column;
+        justify-content: inherit;
+    }
+
+    .work img{
+        height: 400px;
+    }
+}
