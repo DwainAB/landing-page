@@ -5,8 +5,8 @@ body {
 }
 
 header, footer, .gallery, .presentation, .container-book{
-    margin-left: 165px;
-    margin-right: 165px;
+    max-width: 1360px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -57,6 +57,8 @@ header p {
         "item1 item4 item4 item6";
     margin-bottom: 156px;
     margin-top: 80px;
+    max-width: 1360px;
+    margin: 0 auto;
 }
 
 .gallery-item{
@@ -171,8 +173,6 @@ header p {
     align-items: center;
     height: 320px;
     color: #FFF7F0;
-    padding-left: 65px;
-    padding-right: 95px;
     margin-top: 88px;
     margin-bottom: 60px;
 }
@@ -180,6 +180,10 @@ header p {
 .book-text h2{
     font-size: 40px;
     font-weight: 700;
+}
+
+.book-text{
+    margin-left: 65px;
 }
 
 .book-text p{
@@ -196,6 +200,19 @@ header p {
     border-radius: 20px;
     color: #FFF7F0;
     border: 0;
+    margin-right: 95px;
+}
+
+@media screen and (max-width:1440px) {
+    header, footer, .gallery, .presentation, .container-book{
+        max-width: 1060px;
+    }
+}
+@media screen and (max-width:1100px) {
+    header, footer, .gallery, .presentation, .container-book{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
 
 @media screen and (max-width:1024px) {
